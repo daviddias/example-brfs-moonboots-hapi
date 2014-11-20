@@ -8,12 +8,12 @@ server.pack.register({
   plugin: moonboots,
   options: {
     appPath: '/{p*}',
-    browserify: {
-      transforms: ['brfs']
-    },
     moonboots: {
       main: __dirname + '/app/js/index.js',
-      developmentMode: true
+      developmentMode: true,
+      browserify: {
+        transforms: ['brfs']
+      }
     }
   }
 }, function () {
